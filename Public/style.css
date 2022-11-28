@@ -1,0 +1,11 @@
+body{
+    background: rgb(6, 1, 34);
+    text-align: center;
+    color: white;
+    font-family: monospace;
+    }
+    footer{
+        position: fixed;
+        bottom: 0;
+        color: gainsboro;
+    }

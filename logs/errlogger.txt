@@ -1,0 +1,11 @@
+
+ 20221125/166941290922:48:29 	 fe11edae-6e45-423d-ba9b-60ebca91625b 	 refreshToken is not defined
+ 20221125/166941295622:49:16 	 69bb90f4-3bbc-4831-b43c-021d1196e8b2 	 refreshToken is not defined
+ 20221125/166941300122:50:01 	 f80a2cfe-d863-411c-9116-0ed034faa9c8 	 refreshToken is not defined
+ 20221126/166945170909:35:09 	 973da5b3-9838-4e3e-8365-2a4fb4847b6a 	 sqlConnection.query is not a function
+ 20221126/166945180909:36:49 	 48d15ebc-7009-4870-9ab4-8749caedf7de 	 sqlConnection.query is not a function
+ 20221126/166945183309:37:13 	 af60d355-ebae-49d7-9ef6-8a4ce841cbb8 	 sqlConnection.query is not a function
+ 20221126/166945194409:39:04 	 d3a49dc7-faf2-4d80-9016-e1e9ecb04ec8 	 sqlConnection.query is not a function
+ 20221126/166945197409:39:34 	 4b0d2117-da40-4d63-81ca-fe97a5c54afe 	 sqlConnection.query is not a function
+ 20221126/166945222309:43:43 	 7c76a423-1b9d-4e6a-a463-af9e1e8e24e6 	 sqlConnection.query is not a function
+ 20221127/166950693400:55:34 	 b7be4e2a-36db-4ecc-952f-9b18fc641da5 	 Not allowed by CORS

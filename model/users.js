@@ -10,7 +10,7 @@ const usersSchema = new Schema({
     image: String,
     password: {type: String, required: true},
     friends: [String],
-    refreshToken:{type:String, required: true}
+    refreshToken:String
 },{timestamps:true})
 
 module.exports = mongoose.model('User', usersSchema)

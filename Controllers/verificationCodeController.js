@@ -9,16 +9,17 @@ const sendCode = async (req, res) => {
     const { email } = req.body
     if(!email) return res.status(400).json({message: "no email"})
     const code = await sendConfirmationMail(email)
-    res.cookie('verify', code, {httpOnly: true, maxAge: 10 * 60 * 1000})
-    res.json({message: "code sent"})
+    res.json({code: code})
 }
 
 const confirmCode = async (req, res) => {
-    const verify = req.cookies?.verify
-    const {email, code} = req.body
+    
+    const {codev, email, code} = req.body
+    const verify= codev?.data?.code
+
 
     if(![email, code, verify].every(Boolean)) return res.status(400).json({message: "All fields required"})
-    if(verify !== code) return res.sendStatus(403)
+    if(verify != code) return res.sendStatus(403)
     const found =await User.findOne({email: email}).exec()
     if(!found) return res.status(400).json({message: "User with email"+email+" not found"})
 

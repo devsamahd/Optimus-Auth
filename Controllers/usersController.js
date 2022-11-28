@@ -20,32 +20,18 @@ const handleNewUser = async (req, res) => {
 
     try{
         const hashed = await bcrypt.hash(password, 10)
-        const accessToken = jwt.sign(
-            {username},
-            process.env.ACCESS_TOKEN_SECRET,
-            {expiresIn: '5m'}
-        )
-        const refreshToken = jwt.sign(
-            {username},
-            process.env.REFRESH_TOKEN_SECRET,
-            {expiresIn: '5d'}
-        )
-        const response =await User.create({
+        
+        await User.create({
             firstname,
             lastname,
             email,
             username,
-            password: hashed,
-            refreshToken
+            password: hashed
         })
         
-        const {_id, firstname, lastname, email, friends, verified, username} = response
-        const user = {_id, firstname, lastname, email, friends, verified, username}
-
-        
-        res.cookie('jwt', refreshToken, {httpOnly: true,secure: true, maxAge: 24 * 60 * 60 * 5000})
-        return res.status(201).json({user, accessToken})
+        return res.status(201).json({message: "User created"})
     }catch(err){
+        console.log(err)
         return res.status(500). json({error: err.message})
     }
 }
